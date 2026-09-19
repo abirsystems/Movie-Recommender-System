@@ -30,7 +30,9 @@ def recommend(movie):
 movies = pickle.load(open('movies.pkl', 'rb'))
 
 # Load similarity matrix locally
-similarity = pickle.load(open('similarity.pkl', 'rb'))
+import gzip, pickle
+with gzip.open("similarity.pkl", "rb") as f:
+    similarity = pickle.load(f)
 
 movies_names = movies['title'].values
 
