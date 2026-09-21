@@ -37,7 +37,7 @@ with gzip.open("similarity.pkl", "rb") as f:
 movies_names = movies['title'].values
 
 # UI
-st.title("Movie Recommendation System")
+st.title("MovieMuse : Movie Recommendation System")
 option = st.selectbox('Type or Select a movie from the dropdown : ', movies_names)
 
 # Button to get recommendations
